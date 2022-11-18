@@ -41,16 +41,16 @@ namespace Assignment
             {
                 List<EmployeeDetails> list = new List<EmployeeDetails>
                 {
-                   new EmployeeDetails(1001,"Malcolm"," Daruwala"," Manager ", new DateOnly(1984/11/16), new DateOnly(2011/06/08)," Mumbai "),
-                   new EmployeeDetails(1002,"Asdin"," Dahila","AsstManager",new DateOnly(1984/08/20),new DateOnly(2011/07/07)," Mumbai "),
-                   new EmployeeDetails(1003,"Madhavi"," Oza ", " Consultant ",new DateOnly(1984/11/14), new DateOnly(2011/06/12)," Pune "),
-                   new EmployeeDetails(1004,"Saba"," Shaikh "," SE ",new DateOnly(1990/06/03),new DateOnly(2016/02/02),"Pune"),
-                   new EmployeeDetails(1005,"Nazia"," Shaikh","SE",new DateOnly(1991/03/08),new DateOnly(2016/02/02),"Mumbai"),
-                   new EmployeeDetails(1006,"Amit"," Pathak","Consultant",new DateOnly(1991/03/08),new DateOnly(2016/02/02),"Chennai"),
-                   new EmployeeDetails(1007,"Vijay","Natrajan","Consultant",new DateOnly(1989/12/02),new DateOnly(2015/06/01),"Mumbai"),
-                   new EmployeeDetails(1008,"Rahul"," Dubey","Associate",new DateOnly(1984/11/16),new DateOnly(2011/06/08),"Chennai"),
-                   new EmployeeDetails(1009,"Suresh"," Mistry","Associate",new DateOnly(1992/08/12),new DateOnly(2014/11/06),"Chennai"),
-                   new EmployeeDetails(1010,"Sumit"," Shah","Manager",new DateOnly(1991/04/12),new DateOnly(2016/01/02),"Pune")
+                   new EmployeeDetails(1001,"Malcolm"," Daruwala"," Manager ", new DateOnly(16,11,1984), new DateOnly(06,08,2011)," Mumbai "),
+                   new EmployeeDetails(1002,"Asdin"," Dahila","AsstManager",new DateOnly(20,08,1984),new DateOnly(07,07,2011)," Mumbai "),
+                   new EmployeeDetails(1003,"Madhavi"," Oza ", " Consultant ",new DateOnly(14,11,1984), new DateOnly(12,10,2011)," Pune "),
+                   new EmployeeDetails(1004,"Saba"," Shaikh "," SE ",new DateOnly(03,06,1990),new DateOnly(02,02,2016),"Pune"),
+                   new EmployeeDetails(1005,"Nazia"," Shaikh","SE",new DateOnly(08,03,1991),new DateOnly(02,02,2016),"Mumbai"),
+                   new EmployeeDetails(1006,"Amit"," Pathak","Consultant",new DateOnly(08,03,1991),new DateOnly(02,02,2016),"Chennai"),
+                   new EmployeeDetails(1007,"Vijay","Natrajan","Consultant",new DateOnly(02,12,1989),new DateOnly(01,06,2015),"Mumbai"),
+                   new EmployeeDetails(1008,"Rahul"," Dubey","Associate",new DateOnly(16,11,1984),new DateOnly(08,06,2011),"Chennai"),
+                   new EmployeeDetails(1009,"Suresh"," Mistry","Associate",new DateOnly(12,08,1992),new DateOnly(06,11,2014),"Chennai"),
+                   new EmployeeDetails(1010,"Sumit"," Shah","Manager",new DateOnly(12,04,1991),new DateOnly(02,01,2016),"Pune")
 
                   
                };
@@ -90,14 +90,14 @@ namespace Assignment
 
                 Console.WriteLine("------------------------------------------------------------");
                 Console.WriteLine(" 5 .Display the details of Employee who have joined before 1/1/2015");
-                var d= from emp4 in list where emp4.DateOnly.DOJ < (2015/01/01) select emp4;
+                var d= from emp4 in list where emp4.DateOnly.DOJ < (01,01,2015) select emp4;
                 foreach (EmployeeDetails e4 in d)
                 {
                     Console.WriteLine(e4);
                 }
                 Console.WriteLine("------------------------------------------------------------");
                 Console.WriteLine(" 6.Display the details of Employee whose DateOf Birth is after 1/1/1990 ");
-                var d1= from emp12 in list where emp12.DateOnly.DOB < (1990 / 01 / 01) select emp12;
+                var d1= from emp12 in list where emp12.DateOnly.DOB < (01,01,1990) select emp12;
                 foreach (EmployeeDetails e12 in d1)
                 {
                     Console.WriteLine(e12);
@@ -150,7 +150,7 @@ namespace Assignment
 
                 Console.WriteLine("------------------------------------------------------------");
                 Console.WriteLine(" 11 Display the details of Employee who joined after 1/1/2015");
-                var l = from emp11 in list where emp11.DateOnly.DOJ > ( 2015/01/01) select emp11;
+                var l = from emp11 in list where emp11.DateOnly.DOJ > ( 01,01,2015) select emp11;
                 foreach (EmployeeDetails e11 in l)
                 {
                     Console.WriteLine(e11);
